@@ -1,0 +1,625 @@
+The target system is: Android - 1 - armv7-a
+The host system is: Linux - 5.4.0-131-generic - x86_64
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_50395 && [1/2] Building C object CMakeFiles/cmTC_50395.dir/CMakeCCompilerABI.c.o
+Android (8490178, based on r450784d) clang version 14.0.6 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)
+Target: armv7-none-linux-android21
+Thread model: posix
+InstalledDir: /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/bin
+ (in-process)
+ "/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/bin/clang" -cc1 -triple thumbv7-none-linux-android21 -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=1 -target-cpu generic -target-feature +soft-float-abi -target-feature +vfp2 -target-feature +vfp2sp -target-feature +vfp3 -target-feature +vfp3d16 -target-feature +vfp3d16sp -target-feature +vfp3sp -target-feature -fp16 -target-feature -vfp4 -target-feature -vfp4d16 -target-feature -vfp4d16sp -target-feature -vfp4sp -target-feature -fp-armv8 -target-feature -fp-armv8d16 -target-feature -fp-armv8d16sp -target-feature -fp-armv8sp -target-feature -fullfp16 -target-feature +fp64 -target-feature +d32 -target-feature +neon -target-feature -sha2 -target-feature -aes -target-feature -fp16fml -target-abi aapcs-linux -mfloat-abi soft -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debug-info-kind=constructor -dwarf-version=4 -debugger-tuning=gdb -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp -resource-dir /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6 -dependency-file CMakeFiles/cmTC_50395.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_50395.dir/CMakeCCompilerABI.c.o -sys-header-deps -D ANDROID -D _FORTIFY_SOURCE=2 -isysroot /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot -internal-isystem /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/include -internal-isystem /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/local/include -internal-externc-isystem /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/arm-linux-androideabi -internal-externc-isystem /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/include -internal-externc-isystem /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include -Wformat -fdebug-compilation-dir=/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 2 -fno-signed-char -fgnuc-version=4.2.1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_50395.dir/CMakeCCompilerABI.c.o -x c /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/share/cmake-3.18/Modules/CMakeCCompilerABI.c
+clang -cc1 version 14.0.6 based upon LLVM 14.0.6git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/include
+ /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/local/include
+ /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/arm-linux-androideabi
+ /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include
+End of search list.
+[2/2] Linking C executable cmTC_50395
+Android (8490178, based on r450784d) clang version 14.0.6 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)
+Target: armv7-none-linux-android21
+Thread model: posix
+InstalledDir: /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/bin
+ "/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/bin/ld" --sysroot=/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot -pie -EL --warn-shared-textrel -z now -z relro -z max-page-size=4096 -X --hash-style=gnu --hash-style=both --enable-new-dtags --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_50395 /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/21/crtbegin_dynamic.o -L/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/arm -L/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/21 -L/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi -L/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/../lib -L/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib --build-id=sha1 --no-rosegment --fatal-warnings --gc-sections --no-undefined --gc-sections CMakeFiles/cmTC_50395.dir/CMakeCCompilerABI.c.o /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-arm-android.a -l:libunwind.a -ldl -lc /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-arm-android.a -l:libunwind.a -ldl /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/21/crtend_android.o
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/include]
+    add: [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/local/include]
+    add: [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/arm-linux-androideabi]
+    add: [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include]
+  end of search list found
+  collapse include dir [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/include] ==> [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/include]
+  collapse include dir [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/local/include] ==> [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/local/include]
+  collapse include dir [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/arm-linux-androideabi] ==> [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/arm-linux-androideabi]
+  collapse include dir [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include] ==> [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include]
+  implicit include dirs: [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/include;/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/local/include;/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/arm-linux-androideabi;/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld\.lld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_50395 && [1/2] Building C object CMakeFiles/cmTC_50395.dir/CMakeCCompilerABI.c.o]
+  ignore line: [Android (8490178  based on r450784d) clang version 14.0.6 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)]
+  ignore line: [Target: armv7-none-linux-android21]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/bin]
+  ignore line: [ (in-process)]
+  ignore line: [ "/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/bin/clang" -cc1 -triple thumbv7-none-linux-android21 -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=1 -target-cpu generic -target-feature +soft-float-abi -target-feature +vfp2 -target-feature +vfp2sp -target-feature +vfp3 -target-feature +vfp3d16 -target-feature +vfp3d16sp -target-feature +vfp3sp -target-feature -fp16 -target-feature -vfp4 -target-feature -vfp4d16 -target-feature -vfp4d16sp -target-feature -vfp4sp -target-feature -fp-armv8 -target-feature -fp-armv8d16 -target-feature -fp-armv8d16sp -target-feature -fp-armv8sp -target-feature -fullfp16 -target-feature +fp64 -target-feature +d32 -target-feature +neon -target-feature -sha2 -target-feature -aes -target-feature -fp16fml -target-abi aapcs-linux -mfloat-abi soft -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debug-info-kind=constructor -dwarf-version=4 -debugger-tuning=gdb -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp -resource-dir /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6 -dependency-file CMakeFiles/cmTC_50395.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_50395.dir/CMakeCCompilerABI.c.o -sys-header-deps -D ANDROID -D _FORTIFY_SOURCE=2 -isysroot /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot -internal-isystem /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/include -internal-isystem /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/local/include -internal-externc-isystem /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/arm-linux-androideabi -internal-externc-isystem /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/include -internal-externc-isystem /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include -Wformat -fdebug-compilation-dir=/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 2 -fno-signed-char -fgnuc-version=4.2.1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_50395.dir/CMakeCCompilerABI.c.o -x c /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/share/cmake-3.18/Modules/CMakeCCompilerABI.c]
+  ignore line: [clang -cc1 version 14.0.6 based upon LLVM 14.0.6git default target x86_64-unknown-linux-gnu]
+  ignore line: [ignoring nonexistent directory "/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/include]
+  ignore line: [ /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/local/include]
+  ignore line: [ /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/arm-linux-androideabi]
+  ignore line: [ /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include]
+  ignore line: [End of search list.]
+  ignore line: [[2/2] Linking C executable cmTC_50395]
+  ignore line: [Android (8490178  based on r450784d) clang version 14.0.6 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)]
+  ignore line: [Target: armv7-none-linux-android21]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/bin]
+  link line: [ "/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/bin/ld" --sysroot=/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot -pie -EL --warn-shared-textrel -z now -z relro -z max-page-size=4096 -X --hash-style=gnu --hash-style=both --enable-new-dtags --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_50395 /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/21/crtbegin_dynamic.o -L/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/arm -L/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/21 -L/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi -L/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/../lib -L/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib --build-id=sha1 --no-rosegment --fatal-warnings --gc-sections --no-undefined --gc-sections CMakeFiles/cmTC_50395.dir/CMakeCCompilerABI.c.o /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-arm-android.a -l:libunwind.a -ldl -lc /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-arm-android.a -l:libunwind.a -ldl /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/21/crtend_android.o]
+    arg [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/bin/ld] ==> ignore
+    arg [--sysroot=/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-EL] ==> ignore
+    arg [--warn-shared-textrel] ==> ignore
+    arg [-znow] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-zmax-page-size=4096] ==> ignore
+    arg [-X] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--hash-style=both] ==> ignore
+    arg [--enable-new-dtags] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/system/bin/linker] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_50395] ==> ignore
+    arg [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/21/crtbegin_dynamic.o] ==> ignore
+    arg [-L/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/arm] ==> dir [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/arm]
+    arg [-L/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/21] ==> dir [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/21]
+    arg [-L/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi] ==> dir [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi]
+    arg [-L/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/../lib] ==> dir [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/../lib]
+    arg [-L/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib] ==> dir [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib]
+    arg [--build-id=sha1] ==> ignore
+    arg [--no-rosegment] ==> ignore
+    arg [--fatal-warnings] ==> ignore
+    arg [--gc-sections] ==> ignore
+    arg [--no-undefined] ==> ignore
+    arg [--gc-sections] ==> ignore
+    arg [CMakeFiles/cmTC_50395.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-arm-android.a] ==> lib [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-arm-android.a]
+    arg [-l:libunwind.a] ==> lib [-l:libunwind.a]
+    arg [-ldl] ==> lib [dl]
+    arg [-lc] ==> lib [c]
+    arg [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-arm-android.a] ==> lib [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-arm-android.a]
+    arg [-l:libunwind.a] ==> lib [-l:libunwind.a]
+    arg [-ldl] ==> lib [dl]
+    arg [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/21/crtend_android.o] ==> ignore
+  remove lib [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-arm-android.a]
+  remove lib [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-arm-android.a]
+  collapse library dir [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/arm] ==> [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/arm]
+  collapse library dir [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/21] ==> [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/21]
+  collapse library dir [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi] ==> [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi]
+  collapse library dir [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/../lib] ==> [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib]
+  collapse library dir [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib] ==> [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib]
+  implicit libs: [-l:libunwind.a;dl;c;-l:libunwind.a;dl]
+  implicit dirs: [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/arm;/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/21;/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi;/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib]
+  implicit fwks: []
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_49e3f && [1/2] Building CXX object CMakeFiles/cmTC_49e3f.dir/CMakeCXXCompilerABI.cpp.o
+Android (8490178, based on r450784d) clang version 14.0.6 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)
+Target: armv7-none-linux-android21
+Thread model: posix
+InstalledDir: /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/bin
+ (in-process)
+ "/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++" -cc1 -triple thumbv7-none-linux-android21 -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=1 -target-cpu generic -target-feature +soft-float-abi -target-feature +vfp2 -target-feature +vfp2sp -target-feature +vfp3 -target-feature +vfp3d16 -target-feature +vfp3d16sp -target-feature +vfp3sp -target-feature -fp16 -target-feature -vfp4 -target-feature -vfp4d16 -target-feature -vfp4d16sp -target-feature -vfp4sp -target-feature -fp-armv8 -target-feature -fp-armv8d16 -target-feature -fp-armv8d16sp -target-feature -fp-armv8sp -target-feature -fullfp16 -target-feature +fp64 -target-feature +d32 -target-feature +neon -target-feature -sha2 -target-feature -aes -target-feature -fp16fml -target-abi aapcs-linux -mfloat-abi soft -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debug-info-kind=constructor -dwarf-version=4 -debugger-tuning=gdb -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp -resource-dir /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6 -dependency-file CMakeFiles/cmTC_49e3f.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_49e3f.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -D ANDROID -D _FORTIFY_SOURCE=2 -isysroot /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot -internal-isystem /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1 -internal-isystem /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/include -internal-isystem /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/local/include -internal-externc-isystem /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/arm-linux-androideabi -internal-externc-isystem /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/include -internal-externc-isystem /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include -Wformat -std=c++17 -fdeprecated-macro -fdebug-compilation-dir=/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 2 -fno-signed-char -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_49e3f.dir/CMakeCXXCompilerABI.cpp.o -x c++ /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/share/cmake-3.18/Modules/CMakeCXXCompilerABI.cpp
+clang -cc1 version 14.0.6 based upon LLVM 14.0.6git default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1
+ /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/include
+ /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/local/include
+ /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/arm-linux-androideabi
+ /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include
+End of search list.
+[2/2] Linking CXX executable cmTC_49e3f
+Android (8490178, based on r450784d) clang version 14.0.6 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)
+Target: armv7-none-linux-android21
+Thread model: posix
+InstalledDir: /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/bin
+ "/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/bin/ld" --sysroot=/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot -pie -EL --warn-shared-textrel -z now -z relro -z max-page-size=4096 -X --hash-style=gnu --hash-style=both --enable-new-dtags --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_49e3f /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/21/crtbegin_dynamic.o -L/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/arm -L/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/21 -L/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi -L/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/../lib -L/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib --build-id=sha1 --no-rosegment --fatal-warnings --gc-sections --no-undefined --gc-sections CMakeFiles/cmTC_49e3f.dir/CMakeCXXCompilerABI.cpp.o -Bstatic -lc++ -Bdynamic -lm /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-arm-android.a -l:libunwind.a -ldl -lc /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-arm-android.a -l:libunwind.a -ldl /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/21/crtend_android.o
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1]
+    add: [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/include]
+    add: [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/local/include]
+    add: [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/arm-linux-androideabi]
+    add: [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include]
+  end of search list found
+  collapse include dir [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1] ==> [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1]
+  collapse include dir [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/include] ==> [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/include]
+  collapse include dir [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/local/include] ==> [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/local/include]
+  collapse include dir [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/arm-linux-androideabi] ==> [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/arm-linux-androideabi]
+  collapse include dir [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include] ==> [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include]
+  implicit include dirs: [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1;/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/include;/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/local/include;/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/arm-linux-androideabi;/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld\.lld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_49e3f && [1/2] Building CXX object CMakeFiles/cmTC_49e3f.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [Android (8490178  based on r450784d) clang version 14.0.6 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)]
+  ignore line: [Target: armv7-none-linux-android21]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/bin]
+  ignore line: [ (in-process)]
+  ignore line: [ "/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++" -cc1 -triple thumbv7-none-linux-android21 -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=1 -target-cpu generic -target-feature +soft-float-abi -target-feature +vfp2 -target-feature +vfp2sp -target-feature +vfp3 -target-feature +vfp3d16 -target-feature +vfp3d16sp -target-feature +vfp3sp -target-feature -fp16 -target-feature -vfp4 -target-feature -vfp4d16 -target-feature -vfp4d16sp -target-feature -vfp4sp -target-feature -fp-armv8 -target-feature -fp-armv8d16 -target-feature -fp-armv8d16sp -target-feature -fp-armv8sp -target-feature -fullfp16 -target-feature +fp64 -target-feature +d32 -target-feature +neon -target-feature -sha2 -target-feature -aes -target-feature -fp16fml -target-abi aapcs-linux -mfloat-abi soft -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debug-info-kind=constructor -dwarf-version=4 -debugger-tuning=gdb -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp -resource-dir /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6 -dependency-file CMakeFiles/cmTC_49e3f.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_49e3f.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -D ANDROID -D _FORTIFY_SOURCE=2 -isysroot /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot -internal-isystem /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1 -internal-isystem /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/include -internal-isystem /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/local/include -internal-externc-isystem /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/arm-linux-androideabi -internal-externc-isystem /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/include -internal-externc-isystem /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include -Wformat -std=c++17 -fdeprecated-macro -fdebug-compilation-dir=/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 2 -fno-signed-char -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_49e3f.dir/CMakeCXXCompilerABI.cpp.o -x c++ /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/share/cmake-3.18/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [clang -cc1 version 14.0.6 based upon LLVM 14.0.6git default target x86_64-unknown-linux-gnu]
+  ignore line: [ignoring nonexistent directory "/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1]
+  ignore line: [ /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/include]
+  ignore line: [ /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/local/include]
+  ignore line: [ /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/arm-linux-androideabi]
+  ignore line: [ /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include]
+  ignore line: [End of search list.]
+  ignore line: [[2/2] Linking CXX executable cmTC_49e3f]
+  ignore line: [Android (8490178  based on r450784d) clang version 14.0.6 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)]
+  ignore line: [Target: armv7-none-linux-android21]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/bin]
+  link line: [ "/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/bin/ld" --sysroot=/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot -pie -EL --warn-shared-textrel -z now -z relro -z max-page-size=4096 -X --hash-style=gnu --hash-style=both --enable-new-dtags --eh-frame-hdr -m armelf_linux_eabi -dynamic-linker /system/bin/linker -o cmTC_49e3f /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/21/crtbegin_dynamic.o -L/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/arm -L/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/21 -L/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi -L/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/../lib -L/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib --build-id=sha1 --no-rosegment --fatal-warnings --gc-sections --no-undefined --gc-sections CMakeFiles/cmTC_49e3f.dir/CMakeCXXCompilerABI.cpp.o -Bstatic -lc++ -Bdynamic -lm /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-arm-android.a -l:libunwind.a -ldl -lc /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-arm-android.a -l:libunwind.a -ldl /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/21/crtend_android.o]
+    arg [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/bin/ld] ==> ignore
+    arg [--sysroot=/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-EL] ==> ignore
+    arg [--warn-shared-textrel] ==> ignore
+    arg [-znow] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-zmax-page-size=4096] ==> ignore
+    arg [-X] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--hash-style=both] ==> ignore
+    arg [--enable-new-dtags] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/system/bin/linker] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_49e3f] ==> ignore
+    arg [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/21/crtbegin_dynamic.o] ==> ignore
+    arg [-L/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/arm] ==> dir [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/arm]
+    arg [-L/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/21] ==> dir [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/21]
+    arg [-L/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi] ==> dir [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi]
+    arg [-L/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/../lib] ==> dir [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/../lib]
+    arg [-L/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib] ==> dir [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib]
+    arg [--build-id=sha1] ==> ignore
+    arg [--no-rosegment] ==> ignore
+    arg [--fatal-warnings] ==> ignore
+    arg [--gc-sections] ==> ignore
+    arg [--no-undefined] ==> ignore
+    arg [--gc-sections] ==> ignore
+    arg [CMakeFiles/cmTC_49e3f.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-Bstatic] ==> ignore
+    arg [-lc++] ==> lib [c++]
+    arg [-Bdynamic] ==> ignore
+    arg [-lm] ==> lib [m]
+    arg [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-arm-android.a] ==> lib [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-arm-android.a]
+    arg [-l:libunwind.a] ==> lib [-l:libunwind.a]
+    arg [-ldl] ==> lib [dl]
+    arg [-lc] ==> lib [c]
+    arg [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-arm-android.a] ==> lib [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-arm-android.a]
+    arg [-l:libunwind.a] ==> lib [-l:libunwind.a]
+    arg [-ldl] ==> lib [dl]
+    arg [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/21/crtend_android.o] ==> ignore
+  remove lib [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-arm-android.a]
+  remove lib [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-arm-android.a]
+  collapse library dir [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/arm] ==> [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/arm]
+  collapse library dir [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/21] ==> [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/21]
+  collapse library dir [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi] ==> [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi]
+  collapse library dir [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/../lib] ==> [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib]
+  collapse library dir [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib] ==> [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib]
+  implicit libs: [c++;m;-l:libunwind.a;dl;c;-l:libunwind.a;dl]
+  implicit dirs: [/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/14.0.6/lib/linux/arm;/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/21;/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi;/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib]
+  implicit fwks: []
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_38183 && [1/2] Building C object CMakeFiles/cmTC_38183.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_38183
+
+
+
+Determining if files sys/queue.h exist passed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_82018 && [1/2] Building C object CMakeFiles/cmTC_82018.dir/have_sys_queue_h.c.o
+[2/2] Linking C executable cmTC_82018
+
+
+
+Determining if files sys/socket.h;linux/if_addr.h exist passed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_0e02d && [1/2] Building C object CMakeFiles/cmTC_0e02d.dir/have_linux_if_addr_h.c.o
+[2/2] Linking C executable cmTC_0e02d
+
+
+
+Determining if files sys/socket.h;linux/rtnetlink.h exist passed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_fb269 && [1/2] Building C object CMakeFiles/cmTC_fb269.dir/have_linux_rtnetlink_h.c.o
+[2/2] Linking C executable cmTC_fb269
+
+
+
+Determining if files sys/types.h;netinet/in.h;netinet/ip.h;netinet/ip_icmp.h exist passed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_298de && [1/2] Building C object CMakeFiles/cmTC_298de.dir/have_netinet_ip_icmp_h.c.o
+[2/2] Linking C executable cmTC_298de
+
+
+
+Determining if files sys/types.h;sys/socket.h;net/route.h exist passed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_c3e5b && [1/2] Building C object CMakeFiles/cmTC_c3e5b.dir/have_net_route_h.c.o
+[2/2] Linking C executable cmTC_c3e5b
+
+
+
+Determining if files stdatomic.h exist passed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_2d817 && [1/2] Building C object CMakeFiles/cmTC_2d817.dir/have_stdatomic_h.c.o
+[2/2] Linking C executable cmTC_2d817
+
+
+
+Determining if the include file usrsctp.h exists passed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_57307 && [1/2] Building C object CMakeFiles/cmTC_57307.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_57307
+
+
+
+Performing C SOURCE FILE Test has_wfloat_equal succeeded with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_dc358 && [1/2] Building C object CMakeFiles/cmTC_dc358.dir/src.c.o
+[2/2] Linking C executable cmTC_dc358
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test has_wshadow succeeded with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_e4b6d && [1/2] Building C object CMakeFiles/cmTC_e4b6d.dir/src.c.o
+[2/2] Linking C executable cmTC_e4b6d
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test has_wpointer_aritih succeeded with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_e545c && [1/2] Building C object CMakeFiles/cmTC_e545c.dir/src.c.o
+[2/2] Linking C executable cmTC_e545c
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test has_wunreachable_code succeeded with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_d953f && [1/2] Building C object CMakeFiles/cmTC_d953f.dir/src.c.o
+[2/2] Linking C executable cmTC_d953f
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test has_winit_self succeeded with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_c45f9 && [1/2] Building C object CMakeFiles/cmTC_c45f9.dir/src.c.o
+[2/2] Linking C executable cmTC_c45f9
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test has_wno_unused_function succeeded with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_eaf0b && [1/2] Building C object CMakeFiles/cmTC_eaf0b.dir/src.c.o
+[2/2] Linking C executable cmTC_eaf0b
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test has_wno_unused_parameter succeeded with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_6ccc6 && [1/2] Building C object CMakeFiles/cmTC_6ccc6.dir/src.c.o
+[2/2] Linking C executable cmTC_6ccc6
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test has_wno_unreachable_code succeeded with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_faa5a && [1/2] Building C object CMakeFiles/cmTC_faa5a.dir/src.c.o
+[2/2] Linking C executable cmTC_faa5a
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test has_wstrict_prototypes succeeded with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_95501 && [1/2] Building C object CMakeFiles/cmTC_95501.dir/src.c.o
+[2/2] Linking C executable cmTC_95501
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test has_wno_address_of_packed_member succeeded with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_71193 && [1/2] Building C object CMakeFiles/cmTC_71193.dir/src.c.o
+[2/2] Linking C executable cmTC_71193
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test has_wno_deprecated_declarations succeeded with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_fc300 && [1/2] Building C object CMakeFiles/cmTC_fc300.dir/src.c.o
+[2/2] Linking C executable cmTC_fc300
+
+
+Source file was:
+int main(void) { return 0; }
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_a2481 && [1/2] Building C object CMakeFiles/cmTC_a2481.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_a2481
+
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_d4e5b && [1/2] Building C object CMakeFiles/cmTC_d4e5b.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_d4e5b
+
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_5fd89 && [1/2] Building C object CMakeFiles/cmTC_5fd89.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_5fd89
+
+
+
+Determining size of unsigned short passed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_10fd3 && [1/2] Building C object CMakeFiles/cmTC_10fd3.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o
+[2/2] Linking C executable cmTC_10fd3
+
+
+
+Determining if the system is big endian passed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_a3ad0 && [1/2] Building C object CMakeFiles/cmTC_a3ad0.dir/TestEndianess.c.o
+[2/2] Linking C executable cmTC_a3ad0
+
+
+TestEndianess.c:
+/* A 16 bit integer is required. */
+typedef unsigned short cmakeint16;
+
+/* On a little endian machine, these 16bit ints will give "THIS IS LITTLE ENDIAN."
+   On a big endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_little[] =  {0x4854, 0x5349, 0x4920, 0x2053, 0x494c, 0x5454, 0x454c, 0x4520, 0x444e, 0x4149, 0x2e4e, 0x0000};
+
+/* on a big endian machine, these 16bit ints will give "THIS IS BIG ENDIAN."
+   On a little endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_big[] =     {0x5448, 0x4953, 0x2049, 0x5320, 0x4249, 0x4720, 0x454e, 0x4449, 0x414e, 0x2e2e, 0x0000};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_little[argc];
+  require += info_big[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the include file arpa/inet.h exists passed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_bf4ae && [1/2] Building C object CMakeFiles/cmTC_bf4ae.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_bf4ae
+
+
+
+Determining if the include file byteswap.h exists passed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_1f670 && [1/2] Building C object CMakeFiles/cmTC_1f670.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_1f670
+
+
+
+Determining if the include file inttypes.h exists passed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_034bf && [1/2] Building C object CMakeFiles/cmTC_034bf.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_034bf
+
+
+
+Determining if the include file netinet/in.h exists passed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_6fb05 && [1/2] Building C object CMakeFiles/cmTC_6fb05.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_6fb05
+
+
+
+Determining if the include file stdlib.h exists passed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_d1a75 && [1/2] Building C object CMakeFiles/cmTC_d1a75.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_d1a75
+
+
+
+Determining if the include file sys/socket.h exists passed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_edb6d && [1/2] Building C object CMakeFiles/cmTC_edb6d.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_edb6d
+
+
+
+Determining if the include file unistd.h exists passed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_255a7 && [1/2] Building C object CMakeFiles/cmTC_255a7.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_255a7
+
+
+
+Determining if the function sigaction exists passed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_8db1b && [1/2] Building C object CMakeFiles/cmTC_8db1b.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_8db1b
+
+
+
+Determining if the function inet_aton exists passed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_df0f2 && [1/2] Building C object CMakeFiles/cmTC_df0f2.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_df0f2
+
+
+
+Determining if the function usleep exists passed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_ffef5 && [1/2] Building C object CMakeFiles/cmTC_ffef5.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_ffef5
+
+
+
+Determining size of uint8_t passed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_6c002 && [1/2] Building C object CMakeFiles/cmTC_6c002.dir/UINT8_T.c.o
+[2/2] Linking C executable cmTC_6c002
+
+
+
+Determining size of uint16_t passed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_7cde5 && [1/2] Building C object CMakeFiles/cmTC_7cde5.dir/UINT16_T.c.o
+[2/2] Linking C executable cmTC_7cde5
+
+
+
+Determining size of uint32_t passed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_6f9a7 && [1/2] Building C object CMakeFiles/cmTC_6f9a7.dir/UINT32_T.c.o
+[2/2] Linking C executable cmTC_6f9a7
+
+
+
+Determining size of uint64_t passed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_1a3b2 && [1/2] Building C object CMakeFiles/cmTC_1a3b2.dir/UINT64_T.c.o
+[2/2] Linking C executable cmTC_1a3b2
+
+
+
+Determining size of int32_t passed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_c1f16 && [1/2] Building C object CMakeFiles/cmTC_c1f16.dir/INT32_T.c.o
+[2/2] Linking C executable cmTC_c1f16
+
+
+
+Determining size of unsigned long passed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_c76ec && [1/2] Building C object CMakeFiles/cmTC_c76ec.dir/SIZEOF_UNSIGNED_LONG.c.o
+[2/2] Linking C executable cmTC_c76ec
+
+
+
+Determining size of unsigned long long passed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_ad9db && [1/2] Building C object CMakeFiles/cmTC_ad9db.dir/SIZEOF_UNSIGNED_LONG_LONG.c.o
+[2/2] Linking C executable cmTC_ad9db
+
+
+
+Performing C SOURCE FILE Test HAVE_INLINE succeeded with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_534af && [1/2] Building C object CMakeFiles/cmTC_534af.dir/src.c.o
+[2/2] Linking C executable cmTC_534af
+
+
+Source file was:
+inline void func(); void func() { } int main() { func(); return 0; }

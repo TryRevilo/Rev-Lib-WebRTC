@@ -1,0 +1,190 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_e2522 && [1/2] Building C object CMakeFiles/cmTC_e2522.dir/src.c.o
+src.c:13:3: warning: implicit declaration of function 'pthread_cancel' is invalid in C99 [-Wimplicit-function-declaration]
+  pthread_cancel(thread);
+  ^
+1 warning generated.
+[2/2] Linking C executable cmTC_e2522
+FAILED: cmTC_e2522 
+: && /home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=armv7-none-linux-androideabi21 --sysroot=/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -DCMAKE_HAVE_LIBC_PTHREAD -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--gc-sections -Wl,--no-undefined -Qunused-arguments -Wl,--gc-sections CMakeFiles/cmTC_e2522.dir/src.c.o -o cmTC_e2522  -latomic -lm && :
+ld: error: undefined symbol: pthread_cancel
+>>> referenced by src.c:13
+>>>               CMakeFiles/cmTC_e2522.dir/src.c.o:(main)
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C SOURCE FILE Test have_sa_len failed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_0778b && [1/2] Building C object CMakeFiles/cmTC_0778b.dir/src.c.o
+FAILED: CMakeFiles/cmTC_0778b.dir/src.c.o 
+/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=armv7-none-linux-androideabi21 --sysroot=/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -I/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/libs/libdatachannel/deps/usrsctp/usrsctplib -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -Dhave_sa_len -fPIE -MD -MT CMakeFiles/cmTC_0778b.dir/src.c.o -MF CMakeFiles/cmTC_0778b.dir/src.c.o.d -o CMakeFiles/cmTC_0778b.dir/src.c.o -c src.c
+src.c:7:40: error: no member named 'sa_len' in 'struct sockaddr'
+  (void)sizeof(((struct sockaddr *)0)->sa_len);
+               ~~~~~~~~~~~~~~~~~~~~~~  ^
+1 error generated.
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/socket.h>
+
+int main()
+{
+  (void)sizeof(((struct sockaddr *)0)->sa_len);
+  return 0;
+}
+
+Performing C SOURCE FILE Test have_sin_len failed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_0c809 && [1/2] Building C object CMakeFiles/cmTC_0c809.dir/src.c.o
+FAILED: CMakeFiles/cmTC_0c809.dir/src.c.o 
+/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=armv7-none-linux-androideabi21 --sysroot=/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -I/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/libs/libdatachannel/deps/usrsctp/usrsctplib -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -Dhave_sin_len -fPIE -MD -MT CMakeFiles/cmTC_0c809.dir/src.c.o -MF CMakeFiles/cmTC_0c809.dir/src.c.o.d -o CMakeFiles/cmTC_0c809.dir/src.c.o -c src.c
+src.c:7:43: error: no member named 'sin_len' in 'struct sockaddr_in'
+  (void)sizeof(((struct sockaddr_in *)0)->sin_len);
+               ~~~~~~~~~~~~~~~~~~~~~~~~~  ^
+1 error generated.
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <netinet/in.h>
+
+int main()
+{
+  (void)sizeof(((struct sockaddr_in *)0)->sin_len);
+  return 0;
+}
+
+Performing C SOURCE FILE Test have_sin6_len failed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_effa2 && [1/2] Building C object CMakeFiles/cmTC_effa2.dir/src.c.o
+FAILED: CMakeFiles/cmTC_effa2.dir/src.c.o 
+/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=armv7-none-linux-androideabi21 --sysroot=/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -I/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/libs/libdatachannel/deps/usrsctp/usrsctplib -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -Dhave_sin6_len -fPIE -MD -MT CMakeFiles/cmTC_effa2.dir/src.c.o -MF CMakeFiles/cmTC_effa2.dir/src.c.o.d -o CMakeFiles/cmTC_effa2.dir/src.c.o -c src.c
+src.c:7:44: error: no member named 'sin6_len' in 'struct sockaddr_in6'
+  (void)sizeof(((struct sockaddr_in6 *)0)->sin6_len);
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~  ^
+1 error generated.
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <netinet/in.h>
+
+int main()
+{
+  (void)sizeof(((struct sockaddr_in6 *)0)->sin6_len);
+  return 0;
+}
+
+Performing C SOURCE FILE Test have_sconn_len failed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_aa210 && [1/2] Building C object CMakeFiles/cmTC_aa210.dir/src.c.o
+FAILED: CMakeFiles/cmTC_aa210.dir/src.c.o 
+/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=armv7-none-linux-androideabi21 --sysroot=/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot  -I/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/libs/libdatachannel/deps/usrsctp/usrsctplib -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -Dhave_sconn_len -fPIE -MD -MT CMakeFiles/cmTC_aa210.dir/src.c.o -MF CMakeFiles/cmTC_aa210.dir/src.c.o.d -o CMakeFiles/cmTC_aa210.dir/src.c.o -c src.c
+src.c:6:45: error: no member named 'sconn_len' in 'struct sockaddr_conn'
+  (void)sizeof(((struct sockaddr_conn *)0)->sconn_len);
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~  ^
+1 error generated.
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+
+#include <usrsctp.h>
+
+int main()
+{
+  (void)sizeof(((struct sockaddr_conn *)0)->sconn_len);
+  return 0;
+}
+
+Determining if the include file machine/types.h exists failed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_305bc && [1/2] Building C object CMakeFiles/cmTC_305bc.dir/CheckIncludeFile.c.o
+FAILED: CMakeFiles/cmTC_305bc.dir/CheckIncludeFile.c.o 
+/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=armv7-none-linux-androideabi21 --sysroot=/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -fPIE -MD -MT CMakeFiles/cmTC_305bc.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_305bc.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_305bc.dir/CheckIncludeFile.c.o -c CheckIncludeFile.c
+CheckIncludeFile.c:1:10: fatal error: 'machine/types.h' file not found
+#include <machine/types.h>
+         ^~~~~~~~~~~~~~~~~
+1 error generated.
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the include file sys/int_types.h exists failed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_39817 && [1/2] Building C object CMakeFiles/cmTC_39817.dir/CheckIncludeFile.c.o
+FAILED: CMakeFiles/cmTC_39817.dir/CheckIncludeFile.c.o 
+/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=armv7-none-linux-androideabi21 --sysroot=/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -fPIE -MD -MT CMakeFiles/cmTC_39817.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_39817.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_39817.dir/CheckIncludeFile.c.o -c CheckIncludeFile.c
+CheckIncludeFile.c:1:10: fatal error: 'sys/int_types.h' file not found
+#include <sys/int_types.h>
+         ^~~~~~~~~~~~~~~~~
+1 error generated.
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the include file windows.h exists failed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_c646c && [1/2] Building C object CMakeFiles/cmTC_c646c.dir/CheckIncludeFile.c.o
+FAILED: CMakeFiles/cmTC_c646c.dir/CheckIncludeFile.c.o 
+/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=armv7-none-linux-androideabi21 --sysroot=/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -fPIE -MD -MT CMakeFiles/cmTC_c646c.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_c646c.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_c646c.dir/CheckIncludeFile.c.o -c CheckIncludeFile.c
+CheckIncludeFile.c:1:10: fatal error: 'windows.h' file not found
+#include <windows.h>
+         ^~~~~~~~~~~
+1 error generated.
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the include file winsock2.h exists failed with the following output:
+Change Dir: /home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/2s575456/armeabi-v7a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja cmTC_8c1c7 && [1/2] Building C object CMakeFiles/cmTC_8c1c7.dir/CheckIncludeFile.c.o
+FAILED: CMakeFiles/cmTC_8c1c7.dir/CheckIncludeFile.c.o 
+/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=armv7-none-linux-androideabi21 --sysroot=/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -fPIE -MD -MT CMakeFiles/cmTC_8c1c7.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_8c1c7.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_8c1c7.dir/CheckIncludeFile.c.o -c CheckIncludeFile.c
+CheckIncludeFile.c:1:10: fatal error: 'winsock2.h' file not found
+#include <winsock2.h>
+         ^~~~~~~~~~~~
+1 error generated.
+ninja: build stopped: subcommand failed.
+
+
+

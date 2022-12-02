@@ -1,0 +1,22 @@
+# ninja log v5
+188	6123	1669472717	CMakeFiles/rev_client.dir/src/main/cpp/rev_client/parse_cl.cpp.o	75a77d37f2f835a
+0	54	1669644246	build.ninja	357903268cfb1e87
+10817	13256	1669911305	../../../../build/intermediates/cxx/Debug/5u4b3g2f/obj/armeabi-v7a/librev_client.so	406166cc75b78683
+10	9626	1669648784	CMakeFiles/rev_client.dir/src/main/cpp/rev_client/main.cpp.o	c5cb1b303e51a609
+13257	13385	1669911305	../../../../build/intermediates/cxx/Debug/5u4b3g2f/obj/armeabi-v7a/libRev-Lib-WebRTC.so	58dec9e66f8faf64
+2	2444	1669897542	CMakeFiles/Rev-Lib-WebRTC.dir/src/main/cpp/Rev-Lib-WebRTC.cpp.o	634a97f811ad2391
+2	10816	1669911302	CMakeFiles/rev_client.dir/src/main/cpp/rev_client/rev_client_init.cpp.o	e7bbb539422e290d
+2	11280	1669912253	CMakeFiles/rev_client.dir/src/main/cpp/rev_client/rev_client_init.cpp.o	e7bbb539422e290d
+11280	13124	1669912255	../../../../build/intermediates/cxx/Debug/5u4b3g2f/obj/armeabi-v7a/librev_client.so	406166cc75b78683
+13124	13215	1669912255	../../../../build/intermediates/cxx/Debug/5u4b3g2f/obj/armeabi-v7a/libRev-Lib-WebRTC.so	58dec9e66f8faf64
+2	11131	1669912736	CMakeFiles/rev_client.dir/src/main/cpp/rev_client/rev_client_init.cpp.o	e7bbb539422e290d
+11132	12861	1669912738	../../../../build/intermediates/cxx/Debug/5u4b3g2f/obj/armeabi-v7a/librev_client.so	406166cc75b78683
+12861	12982	1669912738	../../../../build/intermediates/cxx/Debug/5u4b3g2f/obj/armeabi-v7a/libRev-Lib-WebRTC.so	58dec9e66f8faf64
+0	153	0	clean	5eeabb7116b4f1bf
+0	144	0	clean	5eeabb7116b4f1bf
+2	2918	1669962835	CMakeFiles/Rev-Lib-WebRTC.dir/src/main/cpp/Rev-Lib-WebRTC.cpp.o	634a97f811ad2391
+2918	4258	1669962836	CMakeFiles/rev_client.dir/src/main/cpp/rev_client/parse_cl.cpp.o	75a77d37f2f835a
+2	11588	1669962843	CMakeFiles/rev_client.dir/src/main/cpp/rev_client/main.cpp.o	c5cb1b303e51a609
+2	12145	1669962844	CMakeFiles/rev_client.dir/src/main/cpp/rev_client/rev_client_init.cpp.o	e7bbb539422e290d
+12146	12418	1669962844	../../../../build/intermediates/cxx/Debug/5u4b3g2f/obj/armeabi-v7a/librev_client.so	406166cc75b78683
+12418	12458	1669962844	../../../../build/intermediates/cxx/Debug/5u4b3g2f/obj/armeabi-v7a/libRev-Lib-WebRTC.so	58dec9e66f8faf64
