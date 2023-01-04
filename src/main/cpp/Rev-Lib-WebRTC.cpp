@@ -1,12 +1,20 @@
-#include "rtc/rtc.hpp"
+//
+// Created by rev on 12/30/22.
+//
+
+#include "Rev-Lib-WebRTC.hpp"
+
+#include <jni.h>
+#include <android/log.h>
+
+#include <rtc/rtc.hpp>
+
+#include <nlohmann/json.hpp>
 
 #include <chrono>
 #include <iostream>
 #include <sstream>
 #include <memory>
-
-#include <jni.h>
-#include <android/log.h>
 
 #include "rev_client/rev_client_init.hpp"
 
@@ -14,27 +22,27 @@ using namespace std::chrono_literals;
 using std::shared_ptr;
 using std::weak_ptr;
 
-JavaVM* gJvm = nullptr;
+JavaVM *gJvm = nullptr;
 static jobject gClassLoader;
 static jmethodID gFindClassMethod;
 
-JNIEnv* getEnv() {
+shared_ptr<rtc::WebSocket> revWS = std::make_shared<rtc::WebSocket>();
+
+JNIEnv *getEnv() {
     JNIEnv *env;
 
-    int status = gJvm->GetEnv((void**)&env, JNI_VERSION_1_6);
-    if(status < 0) {
+    int status = gJvm->GetEnv((void **) &env, JNI_VERSION_1_6);
+    if (status < 0) {
         status = gJvm->AttachCurrentThread(&env, NULL);
-        if(status < 0) {
+        if (status < 0) {
             return nullptr;
         }
     }
     return env;
 }
 
-// --------------------------
-
 JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM *pjvm, void *reserved) {
-    __android_log_print(ANDROID_LOG_ERROR, "MyApp", ">>> JNI_OnLoad <<<");
+    __android_log_print(ANDROID_LOG_ERROR, "MyApp", ">>> Rev-Lib-WebRTC >>> JNI_OnLoad <<<");
 
     gJvm = pjvm;  // cache the JavaVM pointer
     auto env = getEnv();
@@ -64,33 +72,32 @@ JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM *pjvm, void *reserved) {
     }
 
     jobject tempGClassLoader = env->CallObjectMethod(randomClass, getClassLoaderMethod);
-    gClassLoader = (jclass)env->NewGlobalRef(tempGClassLoader);
+    gClassLoader = (jclass) env->NewGlobalRef(tempGClassLoader);
 
-    gFindClassMethod = env->GetMethodID(classLoaderClass, "findClass","(Ljava/lang/String;)Ljava/lang/Class;");
+    gFindClassMethod = env->GetMethodID(classLoaderClass, "findClass", "(Ljava/lang/String;)Ljava/lang/Class;");
 
     return JNI_VERSION_1_6;
 }
 
-jclass findClass(const char* name) {
+jclass findClass(const char *name) {
     __android_log_print(ANDROID_LOG_ERROR, "MyApp", ">>> Find Class : %s", name);
 
     return static_cast<jclass>(getEnv()->CallObjectMethod(gClassLoader, gFindClassMethod, getEnv()->NewStringUTF(name)));
 }
 
-// --------------------------
+void revWebServerConnectedCallBack(char *revData) {
+    __android_log_print(ANDROID_LOG_ERROR, "MyApp", ">>> revData : %s", revData);
+
+    revInitNativeEvent("revWebServerConnected", revData);
+}
 
 extern "C"
-JNIEXPORT jstring JNICALL
+JNIEXPORT void JNICALL
 Java_rev_ca_rev_1lib_1webrtc_RevWebRTCInit_revInitWS(JNIEnv *env, jobject thiz, jstring _url, jstring rev_local_id) {
     const char *url = env->GetStringUTFChars(_url, 0);
     const char *revLocalId = env->GetStringUTFChars(rev_local_id, 0);
 
-    std::string revInitWSStatus;
-    jstring REV_WEB_SERVER_VAL = env->NewStringUTF("");
-
-    revInitWS(url, revLocalId);
-
-    return REV_WEB_SERVER_VAL;
+    revInitWS(revWS, url, revLocalId, revWebServerConnectedCallBack);
 }
 
 extern "C"
@@ -117,6 +124,7 @@ Java_rev_ca_rev_1lib_1webrtc_RevWebRTCInit_revSendMessage(JNIEnv *env, jobject t
 
     return revSendMessage(revTargetId, revData);
 }
+
 extern "C"
 JNIEXPORT jstring JNICALL
 Java_rev_ca_rev_1lib_1webrtc_RevWebRTCInit_revSetTestStr(JNIEnv *env, jobject thiz, jstring rev_key, jstring rev_val) {
@@ -127,6 +135,7 @@ Java_rev_ca_rev_1lib_1webrtc_RevWebRTCInit_revSetTestStr(JNIEnv *env, jobject th
 
     return env->NewStringUTF(revRetVal.c_str());
 }
+
 extern "C"
 JNIEXPORT jstring JNICALL
 Java_rev_ca_rev_1lib_1webrtc_RevWebRTCInit_revGetTestStr(JNIEnv *env, jobject thiz, jstring rev_key) {
@@ -138,19 +147,12 @@ Java_rev_ca_rev_1lib_1webrtc_RevWebRTCInit_revGetTestStr(JNIEnv *env, jobject th
 }
 
 void revInitNativeEvent(std::string revEventName, std::string revData) {
-    __android_log_print(ANDROID_LOG_WARN, "MyApp", ">>> revInitNativeEvent - revEventName : %s - revData : %s", revEventName.c_str(), revData.c_str());
-
-    JNIEnv * g_env = getEnv();
+    JNIEnv *g_env = getEnv();
 
     jstring revJEventName = g_env->NewStringUTF(revEventName.c_str());
     jstring revJEventData = g_env->NewStringUTF(revData.c_str());
 
-    const char *revJEventName_J = g_env->GetStringUTFChars(revJEventName, 0);
-    const char *revJEventData_J = g_env->GetStringUTFChars(revJEventData, 0);
-
-    __android_log_print(ANDROID_LOG_WARN, "MyApp", ">>> revInitNativeEvent - revJEventName_J : %s - revJEventData_J : %s", revJEventName_J, revJEventData_J);
-
-    jclass RevWebRTCEventsReactModule = findClass("com/owki/rev_react_modules/RevWebRTCEventsReactModule");
+    jclass RevWebRTCEventsReactModule = findClass("com/owki/rev_react_modules/rev_web_rtc/RevWebRTCEventsReactModule");
 
     if (RevWebRTCEventsReactModule == nullptr) {
         __android_log_print(ANDROID_LOG_ERROR, "MyApp", ">>> Class NOT Found!");
@@ -171,4 +173,15 @@ void revInitNativeEvent(std::string revEventName, std::string revData) {
     }
 
     gJvm->DetachCurrentThread();
+}
+
+extern "C"
+JNIEXPORT jint JNICALL
+Java_rev_ca_rev_1lib_1webrtc_RevWebRTCInit_revWebRTCLogIn(JNIEnv *env, jobject thiz, jstring rev_target_id, jstring rev_message) {
+    const char *revTargetId = env->GetStringUTFChars(rev_target_id, 0);
+    const char *revMessage = env->GetStringUTFChars(rev_message, 0);
+
+    int revLoggedInState = (int) revWebRTCLogIn(revWS, revTargetId, revMessage);
+
+    return revLoggedInState;
 }

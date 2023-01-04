@@ -72,6 +72,7 @@ add_library( # Sets the name of the library.
         SHARED
 
         # Provides a relative path to your source file(s).
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/main/cpp/Rev-Lib-WebRTC.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/src/main/cpp/Rev-Lib-WebRTC.cpp)
 
 target_include_directories(Rev-Lib-WebRTC

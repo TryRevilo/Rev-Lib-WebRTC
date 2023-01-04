@@ -17,8 +17,6 @@
 #include <thread>
 #include <unordered_map>
 
-#include "../Rev-Lib-WebRTC.cpp"
-
 using namespace std::chrono_literals;
 using std::shared_ptr;
 using std::weak_ptr;
@@ -36,11 +34,11 @@ std::unordered_map<std::string, std::string> revTestData;
 std::unordered_map<std::string, shared_ptr<rtc::PeerConnection>> revPeerConnectionMap;
 std::unordered_map<std::string, shared_ptr<rtc::DataChannel>> revDataChannelMap;
 
+void revHandleLogin(std::string revMessage);
+
 std::shared_ptr<rtc::DataChannel> revInitDataChannel(std::string localId, std::string revTargetId);
 
-std::shared_ptr<rtc::PeerConnection> createPeerConnection(const rtc::Configuration &config, std::weak_ptr<rtc::WebSocket> wws, std::string revTargetId);
-
-std::string randomId(size_t length);
+std::shared_ptr<rtc::PeerConnection> createPeerConnection(std::string revTargetId);
 
 shared_ptr<rtc::WebSocket> ws = std::make_shared<rtc::WebSocket>();
 
@@ -69,70 +67,56 @@ rtc::Configuration revGetConfig() {
 
 rtc::Configuration config = revGetConfig();
 
-void revInitWS(std::string url, std::string revLocalId) {
+std::string revGetData(json revData, std::string revKey) {
+    auto it = revData.find(strdup(revKey.c_str()));
+
+    if (it == revData.end())
+        return nullptr;
+
+    std::string revVal = it->get<std::string>();
+
+    return revVal;
+}
+
+shared_ptr<rtc::WebSocket> revInitWS(shared_ptr<rtc::WebSocket> revWS, std::string url, std::string revLocalId, void (*rev_call_back_func)(char *_revRetStr)) {
     localId = revLocalId;
 
-    __android_log_print(ANDROID_LOG_INFO, "MyApp", ">>> url %s\n", url.c_str());
-
-    std::promise<void> wsPromise;
-    auto wsFuture = wsPromise.get_future();
-
-    ws->onOpen([&wsPromise]() {
-        __android_log_print(ANDROID_LOG_INFO, "MyApp", ">>> WebSocket connected, signaling ready\n");
-        wsPromise.set_value();
+    revWS->onOpen([&rev_call_back_func, &revWS]() {
+        char *revRetStr = ">>> WS OPEN <<<";
+        rev_call_back_func(revRetStr);
     });
 
-    ws->onError([&wsPromise](std::string s) {
-        std::cout << "WebSocket error" << std::endl;
-        wsPromise.set_exception(std::make_exception_ptr(std::runtime_error(s)));
+    revWS->onError([&rev_call_back_func](std::string s) {
+        rev_call_back_func(s.data());
 
-        if (revDataChannelMap.size()) {
-            for (auto i = revDataChannelMap.begin(); i != revDataChannelMap.end(); i++) {
-                auto revCurrDC = i->second;
-
-                if (revCurrDC)
-                    revCurrDC->close();
-            }
-        }
-
-        if (revPeerConnectionMap.size()) {
-            for (auto i = revPeerConnectionMap.begin(); i != revPeerConnectionMap.end(); i++) {
-                auto revCurrPC = i->second;
-
-                if (revCurrPC)
-                    revCurrPC->close();
-            }
-        }
-
-        ws->close();
+        revDataChannelMap.clear();
+        revPeerConnectionMap.clear();
     });
 
-    ws->onClosed([]() { __android_log_print(ANDROID_LOG_INFO, "MyApp", ">>> WebSocket closed\n"); });
+    revWS->onClosed([&rev_call_back_func]() {
+        char *revData = "data: \'onClosed\'}";
+        rev_call_back_func(revData);
 
-    ws->onMessage([wws = make_weak_ptr(ws), revLocalId](auto data) {
-        __android_log_print(ANDROID_LOG_WARN, "MyApp", ">>> WS -> MESSAGE <<< %s\n", std::get<std::string>(data).c_str());
+        revDataChannelMap.clear();
+        revPeerConnectionMap.clear();
+    });
 
+    revWS->onMessage([wws = make_weak_ptr(ws), revLocalId, &rev_call_back_func](auto data) {
         // data holds either std::string or rtc::binary
         if (!std::holds_alternative<std::string>(data))
             return;
 
-        json message = json::parse(std::get<std::string>(data));
+        std::string revDataStr = std::get<std::string>(data);
 
-        std::string s = message.dump();
-        __android_log_print(ANDROID_LOG_WARN, "MyApp", ">>> WS -> MESSAGE <<< %s\n", s.c_str());
+        __android_log_print(ANDROID_LOG_WARN, "MyApp", ">>> WS -> MESSAGE <<< %s\n", revDataStr.c_str());
+
+        json message = json::parse(revDataStr);
 
         auto it = message.find("id");
         if (it == message.end())
             return;
 
         std::string id = it->get<std::string>();
-
-        // Set the id in React
-        if (!id.empty()) {
-            revInitNativeEvent("revSetOnlineUserId", id);
-        }
-
-        __android_log_print(ANDROID_LOG_WARN, "MyApp", ">>> onMessage ID : %s\n", id.c_str());
 
         it = message.find("type");
 
@@ -141,20 +125,20 @@ void revInitWS(std::string url, std::string revLocalId) {
 
         auto type = it->get<std::string>();
 
+        if (type != "login")
+            rev_call_back_func(revDataStr.data());
+
         shared_ptr<rtc::PeerConnection> pc;
 
         if (auto jt = revPeerConnectionMap.find(id); jt != revPeerConnectionMap.end()) {
             pc = jt->second;
-
-            __android_log_print(ANDROID_LOG_INFO, "MyApp", ">>> WS Peer Conn (%d) already established : %s\n", pc->gatheringState(), id.c_str());
+        } else if (type == "login") {
+            revHandleLogin(message.dump());
         } else if (type == "offer") {
-            __android_log_print(ANDROID_LOG_INFO, "MyApp", ">>> Answering to : %s\n", id.c_str());
-            pc = createPeerConnection(config, wws, id);
+            pc = createPeerConnection(id);
         } else if (type == "revConnEntity") {
             revTargetId = (message.find("revTargetId"))->get<std::string>();
             std::string revLocal = (message.find("id"))->get<std::string>();
-
-            __android_log_print(ANDROID_LOG_INFO, "MyApp", ">>> revLocalId : %s >>> revTargetId : %s\n", revLocalId.c_str(), revTargetId.c_str());
 
             revInitDataChannel(revLocalId, revTargetId);
         } else {
@@ -171,15 +155,23 @@ void revInitWS(std::string url, std::string revLocalId) {
         }
     });
 
-    std::string revURL = url + ":" + std::to_string(8000) + "/" + revLocalId;
+    std::string revURL = url + ":" + std::to_string(4000);
 
-    __android_log_print(ANDROID_LOG_INFO, "MyApp", ">>> WebSocket URL is : %s\n", url.c_str());
+    revWS->open(revURL);
 
-    ws->open(revURL);
+    return revWS;
+}
 
-    __android_log_print(ANDROID_LOG_INFO, "MyApp", ">>> Waiting for signaling to be connected...\n");
+int revWebRTCLogIn(shared_ptr<rtc::WebSocket> revWS, std::string _revTargetId, std::string revMessage) {
+    __android_log_print(ANDROID_LOG_INFO, "MyApp", ">>> revWebRTCLogIn : %s\n", revMessage.c_str());
 
-    wsFuture.get();
+    int revSendStatus = revWS->send(revMessage);
+
+    return revSendStatus;
+}
+
+void revHandleLogin(std::string revMessage) {
+    __android_log_print(ANDROID_LOG_INFO, "MyApp", ">>> revHandleLogin - Logged In . . . %s\n", revMessage.c_str());
 }
 
 int revSendMessage(std::string _revTargetId, std::string revMessage) {
@@ -209,67 +201,68 @@ int revSendMessage(std::string _revTargetId, std::string revMessage) {
     return revMsgStatus;
 }
 
-std::shared_ptr<rtc::DataChannel> revInitDataChannel(std::string localId, std::string revTargetId) try {
-    if (revTargetId == localId) {
-        return NULL;
-    }
+std::shared_ptr<rtc::DataChannel> revInitDataChannel(std::string localId, std::string revTargetId) {
+    try {
+        if (revTargetId == localId) {
+            // return NULL;
+        }
 
-    shared_ptr<rtc::PeerConnection> pc;
+        shared_ptr<rtc::PeerConnection> pc;
 
-    if (auto jt = revPeerConnectionMap.find(revTargetId); jt != revPeerConnectionMap.end()) {
-        pc = jt->second;
-    } else {
-        pc = createPeerConnection(config, ws, revTargetId);
-    }
+        if (auto jt = revPeerConnectionMap.find(revTargetId); jt != revPeerConnectionMap.end()) {
+            pc = jt->second;
+        } else {
+            pc = createPeerConnection(revTargetId);
+        }
 
-    const std::string label = revTargetId;
+        const std::string label = revTargetId;
 
-    std::shared_ptr<rtc::DataChannel> dc;
+        std::shared_ptr<rtc::DataChannel> dc;
 
-    if (auto jt = revDataChannelMap.find(revTargetId); jt != revDataChannelMap.end()) {
-        dc = jt->second;
+        if (auto jt = revDataChannelMap.find(revTargetId); jt != revDataChannelMap.end()) {
+            dc = jt->second;
+
+            return dc;
+        } else {
+            dc = pc->createDataChannel(label);
+        }
+
+        dc->onOpen([revTargetId, wdc = make_weak_ptr(dc), localId, label]() {
+            if (auto dc = wdc.lock())
+                dc->send("Hello from " + localId);
+        });
+
+        dc->onClosed([revTargetId]() { __android_log_print(ANDROID_LOG_WARN, "MyApp", ">>> DataChannel from id : %s closed\n", revTargetId.c_str()); });
+
+        dc->onMessage([revTargetId, wdc = make_weak_ptr(dc)](auto data) {
+            // data holds either std::string or rtc::binary
+            if (std::holds_alternative<std::string>(data))
+                __android_log_print(ANDROID_LOG_WARN, "MyApp", ">>> Message from id : %s received : %s", revTargetId.c_str(), std::get<std::string>(data).c_str());
+            else
+                __android_log_print(ANDROID_LOG_INFO, "MyApp", ">>> Binary message from id : %s received, size = %ld\n", revTargetId.c_str(), std::get<rtc::binary>(data).size());
+        });
+
+        revDataChannelMap.emplace(revTargetId, dc);
 
         return dc;
-    } else {
-        dc = pc->createDataChannel(label);
+    }
+    catch (const std::exception &e) {
+        revDataChannelMap.clear();
+        revPeerConnectionMap.clear();
     }
 
-    dc->onOpen([revTargetId, wdc = make_weak_ptr(dc), localId, label]() {
-        if (auto dc = wdc.lock())
-            dc->send("Hello from " + localId);
-    });
-
-    dc->onClosed([revTargetId]() { __android_log_print(ANDROID_LOG_WARN, "MyApp", ">>> DataChannel from id : %s closed\n", revTargetId.c_str()); });
-
-    dc->onMessage([revTargetId, wdc = make_weak_ptr(dc)](auto data) {
-        // data holds either std::string or rtc::binary
-        if (std::holds_alternative<std::string>(data))
-            __android_log_print(ANDROID_LOG_WARN, "MyApp", ">>> Message from id : %s received : %s", revTargetId.c_str(), std::get<std::string>(data).c_str());
-        else
-            __android_log_print(ANDROID_LOG_INFO, "MyApp", ">>> Binary message from id : %s received, size = %ld\n", revTargetId.c_str(), std::get<rtc::binary>(data).size());
-    });
-
-    revDataChannelMap.emplace(revTargetId, dc);
-
-    return dc;
-
-} catch (const std::exception &e) {
-    revDataChannelMap.clear();
-    revPeerConnectionMap.clear();
     return NULL;
 }
 
 // Create and setup a PeerConnection
-std::shared_ptr<rtc::PeerConnection> createPeerConnection(const rtc::Configuration &config, std::weak_ptr<rtc::WebSocket> wws, std::string revTargetId) {
+std::shared_ptr<rtc::PeerConnection> createPeerConnection(std::string revTargetId) {
     std::shared_ptr<rtc::PeerConnection> pc = std::make_shared<rtc::PeerConnection>(config);
 
     pc->onStateChange([](rtc::PeerConnection::State state) { __android_log_print(ANDROID_LOG_INFO, "MyApp", ">>> State: %d\n", state); });
 
-    pc->onGatheringStateChange([](rtc::PeerConnection::GatheringState state) {
-        __android_log_print(ANDROID_LOG_INFO, "MyApp", ">>> Gathering State: %d\n", state);
-    });
+    pc->onGatheringStateChange([](rtc::PeerConnection::GatheringState state) { __android_log_print(ANDROID_LOG_INFO, "MyApp", ">>> Gathering State: %d\n", state); });
 
-    pc->onLocalDescription([wws, revTargetId](rtc::Description description) {
+    pc->onLocalDescription([revTargetId](rtc::Description description) {
         json message = {{"id",          revTargetId},
                         {"type",        description.typeString()},
                         {"description", std::string(description)}};
@@ -277,7 +270,7 @@ std::shared_ptr<rtc::PeerConnection> createPeerConnection(const rtc::Configurati
         ws->send(message.dump());
     });
 
-    pc->onLocalCandidate([wws, revTargetId](rtc::Candidate candidate) {
+    pc->onLocalCandidate([revTargetId](rtc::Candidate candidate) {
         json message = {{"id",        revTargetId},
                         {"type",      "candidate"},
                         {"candidate", std::string(candidate)},
@@ -310,14 +303,3 @@ std::shared_ptr<rtc::PeerConnection> createPeerConnection(const rtc::Configurati
 
     return pc;
 };
-
-// Helper function to generate a random ID
-std::string randomId(size_t length) {
-    static const std::string characters(
-            "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz");
-    std::string id(length, '0');
-    std::default_random_engine rng(std::random_device{}());
-    std::uniform_int_distribution<int> dist(0, int(characters.size() - 1));
-    std::generate(id.begin(), id.end(), [&]() { return characters.at(dist(rng)); });
-    return id;
-}

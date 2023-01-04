@@ -7,16 +7,26 @@
 
 #include <memory>
 
+using std::shared_ptr;
+
 std::string revGetTestStr(std::string revKey);
 
 std::string revSetTestStr(std::string revKey, std::string revVal);
 
-void revInitWS(std::string url, std::string revLocalId);
+shared_ptr<rtc::WebSocket> revInitWS(shared_ptr<rtc::WebSocket> revWS, std::string url, std::string revLocalId, void (*rev_call_back_func)(char *_revRetStr));
 
-std::shared_ptr<rtc::PeerConnection> createPeerConnection(const rtc::Configuration &config, std::weak_ptr<rtc::WebSocket> wws, std::string revTargetId);
+/** START ON MESSAGE **/
+
+void revHandleLogin(std::string revMessage);
+
+/** END ON MESSAGE **/
+
+std::shared_ptr<rtc::PeerConnection> createPeerConnection(std::string revTargetId);
 
 std::shared_ptr<rtc::DataChannel> revInitDataChannel(std::string localId, std::string revTargetId);
 
 int revSendMessage(std::string _revTargetId, std::string revMessage);
+
+int revWebRTCLogIn(shared_ptr<rtc::WebSocket> revWS, std::string _revTargetId, std::string revMessage);
 
 #endif //OWKI_REV_CLIENT_INIT_H

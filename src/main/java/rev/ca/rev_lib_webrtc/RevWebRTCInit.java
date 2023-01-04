@@ -10,9 +10,11 @@ public class RevWebRTCInit {
 
     public native String revGetTestStr(String revKey);
 
-    public native String revInitWS(String url, String revLocalId);
+    public native void revInitWS(String url, String revLocalId);
 
     public native String revInitDataChannel(String revLocalId, String revTargetId);
 
     public native int revSendMessage(String revTargetId, String revData);
+
+    public native int revWebRTCLogIn(String revTargetId, String revMessage);
 }
