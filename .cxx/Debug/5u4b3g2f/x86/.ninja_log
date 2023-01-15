@@ -1,0 +1,8 @@
+# ninja log v5
+1	7	0	clean	5eeabb7116b4f1bf
+23	5897	1673339185	CMakeFiles/Rev-Lib-WebRTC.dir/src/main/cpp/Rev-Lib-WebRTC.cpp.o	5a666d1230c2af98
+5898	7516	1673339187	CMakeFiles/rev_client.dir/src/main/cpp/rev_client/parse_cl.cpp.o	e4197deb5b2c890c
+25	13596	1673339193	CMakeFiles/rev_client.dir/src/main/cpp/rev_client/main.cpp.o	7bf56ede4f92db14
+35	13745	1673339193	CMakeFiles/rev_client.dir/src/main/cpp/rev_client/rev_client_init.cpp.o	fb13efc0303d3cd4
+13745	14467	1673339194	../../../../build/intermediates/cxx/Debug/5u4b3g2f/obj/x86/librev_client.so	cee085840b1a75d1
+14468	14510	1673339194	../../../../build/intermediates/cxx/Debug/5u4b3g2f/obj/x86/libRev-Lib-WebRTC.so	7f9452285acf0bac

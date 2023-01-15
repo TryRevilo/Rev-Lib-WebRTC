@@ -1,0 +1,59 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Rev-Lib-WebRTC",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Rev-Lib-WebRTC::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Rev-Lib-WebRTC-Debug-ba3a9018e4b4ef224432.json",
+					"name" : "Rev-Lib-WebRTC",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/6mi2u1f6/x86_64",
+		"source" : "/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/src/main/cpp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 1
+	}
+}

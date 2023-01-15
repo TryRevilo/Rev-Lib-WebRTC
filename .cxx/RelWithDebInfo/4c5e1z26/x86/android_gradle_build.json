@@ -1,0 +1,50 @@
+{
+  "buildFiles": [
+    "/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja",
+      "-C",
+      "/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/RelWithDebInfo/4c5e1z26/x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja",
+    "-C",
+    "/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/RelWithDebInfo/4c5e1z26/x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "Rev-Lib-WebRTC::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "Rev-Lib-WebRTC",
+      "output": "/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/build/intermediates/cxx/RelWithDebInfo/4c5e1z26/obj/x86/libRev-Lib-WebRTC.so",
+      "runtimeFiles": [
+        "/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/build/intermediates/cxx/RelWithDebInfo/4c5e1z26/obj/x86/librev_client.so",
+        "/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/libs/libdatachannel/lib/x86/libdatachannel.so"
+      ]
+    },
+    "rev_client::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "rev_client",
+      "output": "/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/build/intermediates/cxx/RelWithDebInfo/4c5e1z26/obj/x86/librev_client.so",
+      "runtimeFiles": [
+        "/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/libs/libdatachannel/lib/x86/libdatachannel.so"
+      ]
+    }
+  },
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/bin/clang.lld",
+      "cppCompilerExecutable": "/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_ndk/android-ndk-r25-linux/android-ndk-r25/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++.lld"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

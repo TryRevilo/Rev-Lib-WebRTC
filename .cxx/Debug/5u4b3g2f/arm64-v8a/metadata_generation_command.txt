@@ -1,0 +1,19 @@
+                    -H/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC
+-DCMAKE_SYSTEM_NAME=Android
+-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+-DCMAKE_SYSTEM_VERSION=21
+-DANDROID_PLATFORM=android-21
+-DANDROID_ABI=arm64-v8a
+-DCMAKE_ANDROID_ARCH_ABI=arm64-v8a
+-DANDROID_NDK=/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/android-ndk-r25b-linux/android-ndk-r25b
+-DCMAKE_ANDROID_NDK=/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/android-ndk-r25b-linux/android-ndk-r25b
+-DCMAKE_TOOLCHAIN_FILE=/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/android-ndk-r25b-linux/android-ndk-r25b/build/cmake/android.toolchain.cmake
+-DCMAKE_MAKE_PROGRAM=/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.18.1/bin/ninja
+-DCMAKE_CXX_FLAGS=-std=c++17
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/build/intermediates/cxx/Debug/5u4b3g2f/obj/arm64-v8a
+-DCMAKE_RUNTIME_OUTPUT_DIRECTORY=/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/build/intermediates/cxx/Debug/5u4b3g2f/obj/arm64-v8a
+-DCMAKE_BUILD_TYPE=Debug
+-B/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/5u4b3g2f/arm64-v8a
+-GNinja
+                    Build command args: []
+                    Version: 2

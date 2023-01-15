@@ -1,0 +1,57 @@
+{
+  "buildFiles": [
+    "/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.6.4111459/bin/ninja",
+      "-C",
+      "/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/1t1881v4/arm64-v8a",
+      "-t",
+      "clean"
+    ]
+  ],
+  "libraries": {
+    "Rev-Lib-WebRTC": {
+      "artifactName": "Rev-Lib-WebRTC",
+      "buildCommandComponents": [
+        "/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.6.4111459/bin/ninja",
+        "-C",
+        "/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/1t1881v4/arm64-v8a",
+        "../../../../build/intermediates/cxx/Debug/1t1881v4/obj/arm64-v8a/libRev-Lib-WebRTC.so"
+      ],
+      "abi": "arm64-v8a",
+      "output": "/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/build/intermediates/cxx/Debug/1t1881v4/obj/arm64-v8a/libRev-Lib-WebRTC.so",
+      "runtimeFiles": [
+        "/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/build/intermediates/cxx/Debug/1t1881v4/obj/arm64-v8a/librev_client.so",
+        "/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/libs/libdatachannel/lib/arm64-v8a/libdatachannel.so"
+      ]
+    },
+    "rev_client": {
+      "artifactName": "rev_client",
+      "buildCommandComponents": [
+        "/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.6.4111459/bin/ninja",
+        "-C",
+        "/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/1t1881v4/arm64-v8a",
+        "../../../../build/intermediates/cxx/Debug/1t1881v4/obj/arm64-v8a/librev_client.so"
+      ],
+      "abi": "arm64-v8a",
+      "output": "/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/build/intermediates/cxx/Debug/1t1881v4/obj/arm64-v8a/librev_client.so",
+      "runtimeFiles": [
+        "/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/libs/libdatachannel/lib/arm64-v8a/libdatachannel.so"
+      ]
+    },
+    "datachannel": {
+      "artifactName": "datachannel",
+      "buildCommandComponents": [
+        "/home/rev/Downloads/rev_data/rev_progs/rev_android_studio/rev_and_studio_sdk/cmake/3.6.4111459/bin/ninja",
+        "-C",
+        "/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/1t1881v4/arm64-v8a",
+        "../../../../libs/libdatachannel/lib/arm64-v8a/libdatachannel.so"
+      ],
+      "abi": "arm64-v8a",
+      "output": "/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/libs/libdatachannel/lib/arm64-v8a/libdatachannel.so",
+      "runtimeFiles": []
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Rev-Lib-WebRTC",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Rev-Lib-WebRTC::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Rev-Lib-WebRTC-Debug-aa3941666df4de548abb.json",
+					"name" : "Rev-Lib-WebRTC",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rev_client::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rev_client-Debug-da33c54b78d2f0192c28.json",
+					"name" : "rev_client",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/5u4b3g2f/arm64-v8a",
+		"source" : "/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 1
+	}
+}

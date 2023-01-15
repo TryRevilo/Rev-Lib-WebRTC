@@ -82,7 +82,7 @@ shared_ptr<rtc::WebSocket> revInitWS(shared_ptr<rtc::WebSocket> revWS, std::stri
     localId = revLocalId;
 
     revWS->onOpen([&rev_call_back_func, &revWS]() {
-        char *revRetStr = ">>> WS OPEN <<<";
+        char *revRetStr = "{data: \'>>> WS OPEN <<<\'}";
         rev_call_back_func(revRetStr);
     });
 
@@ -94,7 +94,7 @@ shared_ptr<rtc::WebSocket> revInitWS(shared_ptr<rtc::WebSocket> revWS, std::stri
     });
 
     revWS->onClosed([&rev_call_back_func]() {
-        char *revData = "data: \'onClosed\'}";
+        char *revData = "{data: \'onClosed\'}";
         rev_call_back_func(revData);
 
         revDataChannelMap.clear();
