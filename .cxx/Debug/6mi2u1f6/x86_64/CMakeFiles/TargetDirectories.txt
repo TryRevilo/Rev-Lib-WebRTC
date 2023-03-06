@@ -1,3 +1,0 @@
-/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/6mi2u1f6/x86_64/CMakeFiles/rebuild_cache.dir
-/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/6mi2u1f6/x86_64/CMakeFiles/edit_cache.dir
-/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/6mi2u1f6/x86_64/CMakeFiles/Rev-Lib-WebRTC.dir

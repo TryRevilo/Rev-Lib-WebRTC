@@ -1,4 +1,0 @@
-/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/6v3p4w5e/armeabi-v7a/CMakeFiles/rebuild_cache.dir
-/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/6v3p4w5e/armeabi-v7a/CMakeFiles/edit_cache.dir
-/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/6v3p4w5e/armeabi-v7a/CMakeFiles/Rev-Lib-WebRTC.dir
-/home/rev/Downloads/rev_wip/rev_android/rev_react_native/Owki/android/Rev-Lib-WebRTC/.cxx/Debug/6v3p4w5e/armeabi-v7a/CMakeFiles/rev_client.dir
